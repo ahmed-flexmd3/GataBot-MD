@@ -8,7 +8,7 @@ const handler = async (m, {command, usedPrefix, conn, text}) => {
 if (!text) throw `${mg}${mid.smsMalused4}\n*${usedPrefix + command} Billie Eilish - Bellyache*`
 try {
 if (command == 'play.1') {
-conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsAud, m, { contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: wm, body: '😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽', previewType: 0, thumbnail: gataImg, sourceUrl: accountsgb }}})
+conn.reply(m.chat,'a' m, { contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: wm, body: '😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽', previewType: 0, thumbnail: gataImg, sourceUrl: accountsgb }}})
 try {
 const mediaa = await ytPlay(text);
 const audiocore = mediaa.result2?.[0]?.audio || mediaa.result2?.[1]?.audio || mediaa.result2?.[2]?.audio || null;
@@ -153,7 +153,7 @@ title: '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤�
 body: 'Super Bot WhatsApp',         
 previewType: 0, thumbnail: fs.readFileSync("./media/menus/Menu3.jpg"),
 sourceUrl: `https://github.com/GataNina-Li/GataBot-MD`}}}) 
-  
+
 let res = await fetch("https://violetics.pw/api/media/youtube-play?apikey=beta&query="+text)
 //https://leyscoders-api.herokuapp.com/api/playmp3?q=lebih%20baik%20darinya&apikey=Your_Key
   //("https://api.dhamzxploit.my.id/api/ytplaymp3?text="+text)
@@ -166,7 +166,7 @@ title: '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤�
 body: 'Super Bot WhatsApp',         
 previewType: 0, thumbnail: fs.readFileSync("./media/menus/Menu3.jpg"),
 sourceUrl: `https://github.com/GataNina-Li/GataBot-MD`}}})
-  
+
 let res = await fetch("https://violetics.pw/api/media/youtube-play?apikey=beta&query="+text) 
 let json = await res.json()
 conn.sendFile(m.chat, json.result.url, 'error.mp4', `${wm}`, m)}

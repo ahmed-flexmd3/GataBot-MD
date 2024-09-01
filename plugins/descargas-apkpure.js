@@ -42,7 +42,5 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
   }
 };
 
-handler.command = /^(apkp|apkpure|apkdl)$/i;
-handler.register = true;
-handler.limit = 2;
+handler.command = /^(apk|apkpure|apkdl)$/i;
 export default handler;

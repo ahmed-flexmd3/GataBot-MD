@@ -1,8 +1,8 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './src/grupos.jpg'  
 let isClose = { // Switch Case Like :v
-'open': 'not_announcement',
-'close': 'announcement',
+'فتح': 'not_announcement',
+'قفل': 'announcement',
 'abierto': 'not_announcement',
 'cerrado': 'announcement',
 'abrir': 'not_announcement',
@@ -25,10 +25,9 @@ m.reply(`${lenguajeGB['smsAvisoEG']()}${mid.smsGrup}`)
 }}
 handler.help = ['group open / close', 'grupo abrir / cerrar']
 handler.tags = ['group']
-handler.command = /^(group|grupo)$/i
+handler.command = /^(جروب|grupo)$/i
 handler.admin = true
 handler.botAdmin = true
-handler.exp = 200
 export default handler
 
 

@@ -6,8 +6,8 @@ if (!text) return m.reply(`${lenguajeGB['smsAvisoMG']()} ${mid.smsMalused2}`);
 try {
 const anime = await client.searchAnime(text);
 const result = anime.data[0];
-const resultes = await translate(`${result.background}`, {to: 'es', autoCorrect: true});
-const resultes2 = await translate(`${result.synopsis}`, {to: 'es', autoCorrect: true});
+const resultes = await translate(`${result.background}`, {to: 'en', autoCorrect: true});
+const resultes2 = await translate(`${result.synopsis}`, {to: 'en', autoCorrect: true});
 const AnimeInfo = ` ${mid.smsYT1}
 ❣ ${result.title}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈   
@@ -48,7 +48,7 @@ await conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['s
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
 console.log(e)
 }}
-handler.command = /^(anime|animeinfo)$/i;
+handler.command = /^(انمي|animeinfo)$/i;
 //handler.level = 2
 //handler.register = true
 export default handler;

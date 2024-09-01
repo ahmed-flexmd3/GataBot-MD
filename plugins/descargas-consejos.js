@@ -5,25 +5,26 @@ import axios from "axios"
 let handler = async (m, { conn, usedPrefix, command }) => {
 //let frep = { contextInfo: { externalAdReply: {title: wm, body: author, sourceUrl: redesMenu.getRandom(), thumbnail: await(await fetch(gataMenu.getRandom())).buffer() }}}
 try { 
-if (command == 'consejo' || command == 'advice') { 
-let img = 'https://img.freepik.com/vector-premium/caracter-gato-ilustracion-hoja-trebol_75474-1263.jpg'
+if (command == 'consejo' || command == 'حكمه') { 
+await conn.sendMessage(m.chat, { react: { text: '🍀', key: m.key } })
+let img = 'https://telegra.ph/file/57a0e3d5fa2629a51b8ad.jpg'
 let list = global.motivation 
 let contenido = list[Math.floor(Math.random() * list.length)]
 let result = await translate(`${contenido}`, { to: lenguajeGB.lenguaje(), autoCorrect: true })
 let texto = `
-・☘️・》・》・》
+┏━━━━𓊈⚡حكمه𓊉━━━━┓
 
 *ღ _${result.text}_*
-
-・☘️・》・》・》`
+┗━━━━𓊈⚡حكمه𓊉━━━━┛
+`
 conn.sendButton(m.chat, texto.trim(), wm, img, [
-[lenguajeGB.smsConj(), `${usedPrefix + command}`],
+["حكمه تاني؟", `${usedPrefix + command}`],
 [lenguajeGB.smsConMenu(), `${usedPrefix}menu`]], null, fkontak)}
 //conn.sendFile(m.chat, img, 'error.png', texto.trim(), fkontak)}   
 //await conn.sendButton(m.chat, texto.trim(), wm, img, [[lenguajeGB.smsConj(), `${usedPrefix + command}`], [lenguajeGB.smsConMenu(), `${usedPrefix}menu`]], m, frep)}   
   
 if (command == 'frase2' || command == 'phrase2') { 
-let img = 'https://superpet.pe/blog/wp-content/uploads/2022/05/nombres-para-gatos-blancos.jpg'  
+let img = 'https://telegra.ph/file/57a0e3d5fa2629a51b8ad.jpg'  
 let list = (await axios.get(`https://raw.githubusercontent.com/GataNina-Li/GataBot-MD/master/src/JSON/frase2.json`)).data  
 let contenido = await list[Math.floor(list.length * Math.random())]
 let frase = contenido.motivasi
@@ -43,8 +44,7 @@ conn.sendButton(m.chat, texto.trim(), wm, img, [
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
 console.log(e)}}
-handler.command = ['consejo', 'advice', 'frase2', 'phrase2']
-handler.register = true
+handler.command = ['consejo', 'حكمه', 'frase2', 'phrase2']
 export default handler
 
 global.motivation = [

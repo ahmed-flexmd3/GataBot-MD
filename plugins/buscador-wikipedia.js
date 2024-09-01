@@ -7,22 +7,18 @@ if (!text) throw `${lenguajeGB['smsAvisoMG']()}${mid.smsMalused}\n*${usedPrefix 
 conn.reply(m.chat, `${mid.buscador9}\n\n` + res.result.isi, fkontak, { contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 | 𝙒𝙞𝙠𝙞𝙥𝙚𝙙𝙞𝙖', body: '𝗦𝘂𝗽𝗲𝗿 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗕𝗼𝘁 🐱❤️', previewType: 0, thumbnail: imagen2, sourceUrl: accountsgb }}})
 }).catch((e) => {
 conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['smsMensError2']()} ${usedPrefix + command}\n\n${wm}`, fkontak, m)
-console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
+console.log(`*عايز تبحث عن ايه في ويكيبديا*`)
 console.log(e)
 handler.limit = false
 })};
 handler.help = ['wikipedia'].map((v) => v + ' <apa>');
 handler.tags = ['internet'];
-handler.command = /^(wiki|wikipedia)$/i;
-handler.exp = 40
-handler.level = 3
-handler.limit = 1
-handler.register = true
+handler.command = /^(ويكي|wikipedia)$/i;
 export default handler;
 
 async function wikipedia(querry) {
   try {
-    const link = await axios.get(`https://es.wikipedia.org/wiki/${querry}`);
+    const link = await axios.get(`https://ar.wikipedia.org/wiki/${querry}`);
     const $ = cheerio.load(link.data);
     const judul = $('#firstHeading').text().trim();
     const thumb = $('#mw-content-text').find('div.mw-parser-output > div:nth-child(1) > table > tbody > tr:nth-child(2) > td > a > img').attr('src') || `//i.ibb.co/nzqPBpC/http-error-404-not-found.png`;

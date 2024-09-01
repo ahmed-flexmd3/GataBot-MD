@@ -2,7 +2,7 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `${lenguajeGB['smsAvisoMG']()} Ingrese una Url de un folder de Drive`
+    if (!args[0]) throw `*🤖فين الرابط عشان احمل الي انت عايزه*`
     let url=args[0]
     if (!(url && url.match(/drive\.google/i))) throw `${lenguajeGB['smsAvisoMG']()} La url ingresada no es valida`
     url=url.replace('/mobile', '');
@@ -41,5 +41,5 @@ function eliminarDuplicados(lista) {
 
 handler.help = ['drivefolder'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(drivefolder)$/i
+handler.command = /^(درايف)$/i
 export default handler

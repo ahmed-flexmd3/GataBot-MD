@@ -15,8 +15,6 @@ handler.limit = false
 handler.help = ['tiktokfoto'].map(v => v + ' <username>')
 handler.tags = ['downloader']
 handler.command = /^(tiktokfoto|tiktokphoto)$/i
-handler.limit = 1
-handler.register = true
 export default handler
 
 /*conn.sendHydrated(m.chat, info, wm, null, md, '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿', null, null, [

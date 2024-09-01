@@ -1,5 +1,3 @@
-// Botones interactivos adptados y funcionando por Gata Dios (GataNina-Li)
-
 function clockString(ms) {
   let h = Math.floor(ms / 3600000);
   let m = Math.floor(ms % 3600000 / 60000);
@@ -27,11 +25,23 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   let taguser = '@' + m.sender.split("@s.whatsapp.net")[0];
 await conn.sendMessage(m.chat, { react: { text: '📂', key: m.key } })
-const FLEX = 'https://telegra.ph/file/400d0dc778d6722e46b0a.jpg'
+const PLUTO = 'https://telegra.ph/file/400d0dc778d6722e46b0a.jpg'
 const mentionId = m.key.participant || m.key.remoteJid;
 
-conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { header: { title: `gataVidMenu`}, body: { text: `*
-*`,subtitle: "FLEX",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: FLEX } }, { upload: conn.waUploadToServer }, {quoted: m}))},
+conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { header: { title: `gataVidMenu`}, body: { text: `╔═══━─❤️〖﷽〗❤️─━═══╗
+┏━━━═──━「🤖」━──═━━━┓
+منور قائمه يحب☕
+╗فلوسك💎: ${money}
+╣لفلك🐬: ${level}
+╣مميز🎟️؟: ${user.premiumTime > 0 ? 'مــمـ🔱ـيز' : (isPrems ? 'مــمـ🔱ـيز' : 'عــ🍁ــادي') || ''}
+╣رتبتك🏂:${role}
+╣مطور:FLEX
+╝اصدار:0.1
+اذا سبيت بوت سبيت المطور
+> اختر يحب من قائمه القسم الذي تريده
+
+ولا تنسى ذكر الله❤️
+┗━━━═──━「🤖」━──═━━━┛`,subtitle: "PLUTO",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: PLUTO } }, { upload: conn.waUploadToServer }, {quoted: m}))},
                   contextInfo: {
                       mentionedJid: [m.sender],
                       isForwarded: false,
@@ -41,19 +51,23 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
                           {
                               name: 'single_select',
                               buttonParamsJson: JSON.stringify({
-                                  title: 'قائمه',
+                                  title: '🐊قائمه🐊',
                                   sections: [
                                       {
-                                          title: 'مــرحـ🛡ـبــا بــك فـي مــ☑هــام ستيڤن بـ🤖ـوت',
+                                          title: 'مــرحـ🛡ـبــا بــك فـي مــ☑هــام بلوتو بـ🤖ـوت',
                                           highlight_label: 'بعبص براحتك يابرو 🤖',
                                           rows: [
                                               {
+                                                
                                                   header: 'الــقـ👑ـســم الـاول',
                                                   title: 'استدعاء_قسم_الاعضاء #الاعضاء',
                                                   description: '',
                                                   id: '.م1'
+                                            
                                               },
                                               {
+                                                
+                                                  
                                                   header: 'الــقـ👨🏻‍💻ـســم الــثــانــي',
                                                   title: 'استدعاء_قسم_المشرفين #المشرفين',
                                                   description: '',
@@ -132,12 +146,25 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
                 messageParamsJson: ''
               },
               {
+
             name: "quick_reply",
             buttonParamsJson: '{"display_text":"⌈🚀╎الدردشه المجهوله╎🚀⌋","id":".chathom"}'
                    },
                    {
+                      name: "quick_reply",
+            buttonParamsJson: '{"display_text":"مطورين","id":".owner"}'
+                   },
+                   {
+                      name: "quick_reply",
+            buttonParamsJson: '{"display_text":"معلومات البوت#","id":".معلومات-البوت"}'
+                   },
+                   {
+                       "name": "address_message",
+                            "buttonParamsJson": "{\"display_text\":\"address_message\",\"id\":\"message\"}"
+                         },
+                         {
              name: "cta_url",
-             buttonParamsJson: '{"display_text":"⌈📲╎قـنـاة الـمـطـور╎📲⌋","url":"https://chat.whatsapp.com/JRz2Z2IqhfbI10PbPE5Ydq","merchant_url":"https://chat.whatsapp.com/JRz2Z2IqhfbI10PbPE5Ydq"}'
+             buttonParamsJson: '{"display_text":"⌈📲╎قـنـاة الـمـطـور╎📲⌋","url":"https://whatsapp.com/channel/0029Vag5dT01t90dVIah1X1p","merchant_url":"https://whatsapp.com/channel/0029Vag5dT01t90dVIah1X1p"}'
                           }
                       ]
                   }

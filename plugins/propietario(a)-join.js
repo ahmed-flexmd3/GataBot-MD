@@ -26,7 +26,7 @@ m.reply(`${ag}*✅ TU ENLACE SE ENVIO A MI PROPIETARIO*\n*✅ YOUR LINK WAS SENT
 
 handler.help = ['join [chat.whatsapp.com]']
 handler.tags = ['owner']
-handler.command = /^unete|join|nuevogrupo|unir|unite|unirse|entra|entrar$/i 
-handler.register = true
+handler.command = /^unete|ادخل|nuevogrupo|unir|unite|unirse|entra|entrar$/i 
+handler.rowner = true
 export default handler
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))

@@ -43,12 +43,12 @@ await m.reply(res.data)*/
 } catch {
 }}}
 
-if (command == 'openai' || command == 'ia2' || command == 'chatgpt2') {
+if (command == 'بوت' || command == 'ai' || command == 'نايت') {
 conn.sendPresenceUpdate('composing', m.chat);
 let gpt = await fetch(`https://deliriusapi-official.vercel.app/ia/gptweb?text=${text}`) 
 let res = await gpt.json()
 await m.reply(res.gpt)
 }}
-handler.command = /^(openai|chatgpt|ia|ai|openai2|chatgpt2|ia2)$/i;
+handler.command = /^(بوت|chatgpt|ia|ai|openai2|chatgpt2|ia2)$/i;
 export default handler;
 

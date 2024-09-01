@@ -19,9 +19,6 @@ handler.limit = false
 handler.help = ['', '2'].map(v => 'wallpaper' + v + ' <query>')
 handler.tags = ['downloader']
 handler.command = /^(wp|wallpaper2?)$/i
-handler.register = true
-handler.limit = 1
-handler.level = 3
 export default handler 
 
 /*conn.sendHydrated(m.chat, `💞 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤 | 𝙍𝙚𝙨𝙪𝙡𝙩: ${text}`, `𝙁𝙤𝙣𝙙𝙤 | 𝙒𝙥 | ${wm}`, img, img, '☘️ 𝙐𝙍𝙇', null, null, [

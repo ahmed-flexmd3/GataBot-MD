@@ -42,7 +42,6 @@ handler.help = ['tiktokstalk'].map(v => v + ' <username>')
 handler.tags = ['stalk']
 handler.command = /^(tiktokstalk|ttstalk)$/i
 //handler.exp = 48
-handler.register = true
 export default handler
 
 /*let info = `💖 *Infórmate sobre las Novedades y recuerda tener la última versión.*\n\n💝 *Find out about what's new and remember to have the latest version.*

@@ -20,7 +20,7 @@ m.reply(`╰⊱❌⊱ *FALLÓ* / *FAILED* ⊱❌⊱╮\n❌ 𝗘𝗥𝗥𝗢𝗥
 }
 handler.help = ['creargc *<nombre>*']
 handler.tags = ['owner']
-handler.command = /^(creargrupo|creargroup|creargc|gccreate)$/
+handler.command = /^(اعمل-جروب|creargroup|creargc|gccreate)$/
 handler.owner = true
-//handler.premium = false
+handler.premium = true
 export default handler

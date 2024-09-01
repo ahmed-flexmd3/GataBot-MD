@@ -1,4 +1,4 @@
-import { sticker } from '../lib/sticker.js'
+.,import { sticker } from '../lib/sticker.js'
 import axios from 'axios'
 
 let handler = async (m, {

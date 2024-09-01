@@ -3,7 +3,7 @@
 
 const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   if (!args[0]) {
-    return conn.reply(m.chat, 'Ingresa Un Link De Facebook', m);
+    return conn.reply(m.chat, 'اعطيني رابط المنشور الذي تريد تحميله', m);
   }
 
   let res;
@@ -37,6 +37,6 @@ const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   }
 };
 
-handler.command = /^(facebook)$/i;
+handler.command = /^(فيس)$/i;
 
 export default handler;       
